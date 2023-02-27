@@ -1,1 +1,1 @@
-# prog-iter-msa
+# Progressive and Iterative MSA
