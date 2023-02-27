@@ -1,0 +1,17 @@
+UEvkn: select * from users where id=1   union select null,banner from v$version where rownum=1 -- 1
+UE1kn: select * from users where id=1 union select 1,banner from v$version where rownum=1 -- 1
+1)UE1: select * from users where id=1 +(1) union select 1,banner from v$version where rownum=1 -- 1
+1)UEv: select * from users where id=1 +(1) union select null,banner from v$version where rownum=1 -- 1
+1UE1k: select * from users where id=1 +1 union select 1,banner from v$version where rownum=1 -- 1
+1UEvk: select * from users where id=1 +1 union select null,banner from v$version where rownum=1 -- 1
+.UEvk: select * from users where id=1. union select null,banner from v$version where rownum=1 -- 1
+.UE1k: select * from users where id=1. union select 1,banner from v$version where rownum=1 -- 1
+1&1UE: select * from users where id=11||1 union select 1,banner from v$version where rownum=1 -- 1
+&1UE1: select * from users where id=1 ||1 union select 1,banner from v$version where rownum=1 -- 1
+&1UEv: select * from users where id=1 ||1 union select null,banner from v$version where rownum=1 -- 1
+&(1)o: select * from users where id=1 or (1)=1 union select 1,banner from v$version where rownum=1 -- 1
+.o1UE: select * from users where id=1.*1 union select 1,banner from v$version where rownum=1 -- 1
+UE(1): select * from users where id=1 union select (1),banner from v$version where rownum=1 -- 1
+UE1nc: select * from users where id=1 union select 1a#,banner from v$version where rownum=1 -- 1
+UE1nk: select * from users where id=1 union select 1a,banner from v$version where rownum=1 -- 1
+o(1)U: select * from users where id=1 *(1) union select 1,banner from v$version where rownum=1 -- 1
