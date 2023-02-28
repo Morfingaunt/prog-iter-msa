@@ -5,7 +5,7 @@ from functools import partial
 from Bio.Align import PairwiseAligner
 from iab.algorithms import progressive_msa, progressive_msa_and_tree
 from matplotlib import pyplot as plt
-from scipy.cluster.hierarchy import average
+from scipy.cluster.hierarchy import average, dendrogram
 from skbio import DNA, DistanceMatrix, Sequence, TabularMSA, TreeNode
 from skbio.sequence.distance import kmer_distance
 
@@ -110,11 +110,12 @@ def build_tree(seqs, save_tree=False):
         metric=kmer_distance,
         key='id'
     )
-    if save_tree:
-        guide_dm.plot(cmap="Greens")
-        plt.savefig('tree.png')
     guide_lm = average(guide_dm.condensed_form())
     guide_tree = TreeNode.from_linkage_matrix(guide_lm, guide_dm.ids)
+    if save_tree:
+        dendrogram(guide_lm, labels=guide_dm.ids, orientation='right',
+                      link_color_func=lambda x: 'black')
+        plt.savefig('tree.png')
     # print(guide_tree.ascii_art())
     # all_time = time.perf_counter() - t_start
     # print(f"tree: {all_time}")

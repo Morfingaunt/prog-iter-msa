@@ -7,7 +7,7 @@ from skbio.sequence.distance import kmer_distance
 from msa import (build_tree, get_alignment, iter_alg, kmer_distance,
                  load_datasets, prog_alg)
 
-INDICATOR = 0.4
+INDICATOR = 0.3
 
 
 def test_data(msa, test_seqs):
@@ -47,6 +47,9 @@ def perf_prog(filename):
 
 
 if __name__ == "__main__":
+    # seqs = load_datasets("sqllong.txt")
+    # build_tree(seqs, True)
+    # exit()
     msa_prog = perf_prog("learn.txt")
     msa_iter = perf_iter("learn.txt")
 
