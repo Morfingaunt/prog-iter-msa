@@ -32,7 +32,7 @@ def perf_iter(filename):
     t_start = time.perf_counter()
     msa = iter_alg(seqs, tree)
     all_time = time.perf_counter() - t_start
-    print(f"iter msa: {all_time}")
+    print(f"iterative msa: {all_time}")
     return msa
 
 
@@ -42,40 +42,37 @@ def perf_prog(filename):
     t_start = time.perf_counter()
     msa = prog_alg(seqs, tree)
     all_time = time.perf_counter() - t_start
-    print(f"prog msa: {all_time}")
+    print(f"progressive msa: {all_time}")
     return msa
 
 
 if __name__ == "__main__":
-    # seqs = load_datasets("sqllong.txt")
-    # build_tree(seqs, True)
-    # exit()
-    msa_prog = perf_prog("learn.txt")
-    msa_iter = perf_iter("learn.txt")
+    msa_prog = perf_prog("learn.txt")  # learning (msa perform)
+    msa_iter = perf_iter("learn.txt")  # learning (msa perform)
 
     seqs = load_datasets("libinjection-bypasses.txt")
-    print("\n======libinjection-bypasses======")
+    print("\n======libinjection-bypasses======")  # testing
     print("   Iterative")
     test_data(msa_iter, seqs)
     print("   Progressive")
     test_data(msa_prog, seqs)
 
     seqs = load_datasets("sqlshort.txt")
-    print("\n=============sqlshort============")
+    print("\n=============sqlshort============")  # testing
     print("   Iterative")
     test_data(msa_iter, seqs)
     print("   Progressive")
     test_data(msa_prog, seqs)
 
     seqs = load_datasets("sqllong.txt")
-    print("\n=============sqllong=============")
+    print("\n=============sqllong=============")  # testing
     print("   Iterative")
     test_data(msa_iter, seqs)
     print("   Progressive")
     test_data(msa_prog, seqs)
 
     seqs = load_datasets("fake.txt")
-    print("\n===============fake==============")
+    print("\n===============fake==============")  # testing
     print("   Iterative")
     test_data(msa_iter, seqs)
     print("   Progressive")

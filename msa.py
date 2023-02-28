@@ -1,4 +1,3 @@
-#!/usr/bin/python3.10
 import time
 from functools import partial
 
@@ -9,8 +8,8 @@ from scipy.cluster.hierarchy import average, dendrogram
 from skbio import DNA, DistanceMatrix, Sequence, TabularMSA, TreeNode
 from skbio.sequence.distance import kmer_distance
 
-# k - blocksize
-kmer_distance = partial(kmer_distance, k=3, overlap=False)
+# k - k-mer distance
+kmer_distance = partial(kmer_distance, k=6, overlap=False)
 
 
 def erase_dash(aln1, aln2, max_len):
@@ -104,7 +103,7 @@ def prog_alg(seq_list, guide_tree=None, save_dm=False):
 
 
 def build_tree(seqs, save_tree=False):
-    # t_start = time.perf_counter()
+    t_start = time.perf_counter()
     guide_dm = DistanceMatrix.from_iterable(
         seqs,
         metric=kmer_distance,
@@ -117,8 +116,8 @@ def build_tree(seqs, save_tree=False):
                       link_color_func=lambda x: 'black')
         plt.savefig('tree.png')
     # print(guide_tree.ascii_art())
-    # all_time = time.perf_counter() - t_start
-    # print(f"tree: {all_time}")
+    all_time = time.perf_counter() - t_start
+    print(f"tree: {all_time}")
     return guide_tree
 
 
